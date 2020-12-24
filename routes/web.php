@@ -23,3 +23,5 @@ Route::get('/', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/input', [ContentController::class, 'input'])->name('input');
+
+Route::post('/save', [ContentController::class, 'save'])->name('save');
