@@ -6,12 +6,14 @@
     <title>laravel8</title>
 </head>
 <body>
-    <h1>input</h1>
+    <h1>投稿画面</h1>
 
     <form action="{{ route('save') }}" method="post">
        @csrf
         <textarea name="content" cols="30" rows="10"></textarea>
         <input type="submit" value="送信">
     </form>
+
+    <a href="{{ action('App\Http\Controllers\ContentController@index') }}">戻る</a>
 </body>
 </html>
