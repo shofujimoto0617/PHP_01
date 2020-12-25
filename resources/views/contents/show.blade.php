@@ -12,11 +12,14 @@
             <th>ID</th>
             <th>コンテント</th>
             <th>登録日時</th>
+            <th></th>
         </tr>
         <tr>
             <td>{{ $content['id'] }}</th>
             <td>{{ $content['content'] }}</th>
             <td>{{ $content['created_at']->format('Y/m/d H:i') }}</th>
+            <td><a href="{{ action('App\Http\Controllers\ContentController@edit', $content['id']) }}">編集</a></td>
+            
         </tr>
     <table>
 
