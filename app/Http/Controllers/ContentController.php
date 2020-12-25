@@ -20,7 +20,7 @@ class ContentController extends Controller
         $input_content->content = $request['content'];
         $input_content->save();
 
-        return redirect(route('input'));
+        return redirect(route('index'));
     }
 
     public function index() {
