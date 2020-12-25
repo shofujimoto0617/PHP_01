@@ -36,3 +36,5 @@ Route::get('/{id}', [ContentController::class, 'show'])->name('show');
 
 Route::get('/edit/{id}',[ContentController::class, 'edit'])->name('edit');
 Route::post('/update',[ContentController::class, 'update'])->name('update');
+
+Route::post('/delte/{id}',[ContentController::class, 'delete']);
