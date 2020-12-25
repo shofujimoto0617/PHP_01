@@ -22,4 +22,17 @@ class ContentController extends Controller
 
         return redirect(route('input'));
     }
+
+    public function index() {
+        $contents = Content::all();
+
+        return view('contents.index',['contents'=>$contents]);
+    }
+
+    public function show(Request $request, $id)
+    {
+        $content = Content::findOrFail($id);
+
+        return view('contents.show',['content'=>$content]);
+    }
 }

@@ -25,3 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/input', [ContentController::class, 'input'])->name('input');
 
 Route::post('/save', [ContentController::class, 'save'])->name('save');
+
+Route::get('/index', [ContentController::class, 'index'])->name('index');
+
+Route::get('/{id}', [ContentController::class, 'show'])->name('show');
