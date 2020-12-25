@@ -67,4 +67,10 @@ class ContentController extends Controller
         $content_info->save();
         return redirect(route('index'));
     }
+
+    public function delete(Request $request)
+    {
+        Content::find($request->id)->delete();
+        return redirect('index');
+    }
 }
